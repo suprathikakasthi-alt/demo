@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(12, 0, 0);
+}
+p{
+    color:gray;
+}
+h3{
+    color: aliceblue;
+}
+.hero{
+    height: 300;
+    width:auto;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.movie p{
+    font-family: poopins,sans-serif;
+}
+.movie img{
+    margin-right: 10px;
+    padding: 25px;
+    height: 250;
+}
+@font-face {
+    font-family: roboto;
+    src: url(/fonts/roboto.woff);
+}
+@font-face {
+    font-family: poppins;
+    src: url(/fonts/poppins.woff);
+}
+.movie:hover{
+    transform: scale(1.2);
+    transition: 0.7s;
+}

@@ -1,0 +1,27 @@
+#nav{
+    height: 50px;
+    background-color: rgb(122, 104, 104);
+    width: 100%;
+    color: white;
+    flex: display;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+h2{
+    text-align: center;
+    color: rgb(241, 41, 168);
+}
+p{
+    text-align: center;
+    color: rgb(19, 19, 152);
+    font-size: 30px;
+}
+#logo{
+    margin-left: 20px;
+    font-size: 30px;
+    margin-right: 1100px;
+}

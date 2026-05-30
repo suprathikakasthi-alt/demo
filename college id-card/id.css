@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    background: linear-gradient(rgb(80, 7, 78),rgb(177, 155, 177),rgb(239, 61, 239));
+    padding: 20px; 
+    font-family: arial;
+}
+.id-card{
+    width:340px;
+    background:white;
+    border: 1px solid black;
+    border-color: black;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(13, 13, 13, 0.45);
+    padding: 20px;
+    position:static;
+}
+.card-header{
+    background: linear-gradient(rgb(140, 140, 181));
+    padding-top: 28px;
+    padding-bottom:100px;
+    text-align: center;
+    color: white;
+}
+.photo{
+    width: 90px;
+    height: 150px;
+    border-radius:50%;
+    border:1px solid black;
+    margin-top: -50px;
+    margin-left: 130p;
+    object-fit: cover;
+}
+.photo-wrap{
+    position:static;
+    left:50%;
+    transform:translateX(40%);
+    top:120px;
+    width:140;
+    height: 140;
+    border-radius:2px;
+    /* background-color:aliceblue; */
+    display: flex;
+    box-shadow:( 0 6px 18px rgba(0,0,0,0.25))
+}
+.card-body{
+    padding:90px,24px,20px;
+}
+.student-name{
+    font:large,bold;
+    margin-bottom: 6px;
+    color: #0b2742;
+}
+.college{
+    font:medium;
+    color:#334155;
+}
+.divider{
+    margin:auto;
+    width:auto;
+    border-top:1px solid #e6e9ee;
+}
+.details p{
+    color: #344154;
+    font-size:13px;
+    margin-bottom: 8px;
+}
+.id-line{
+    margin:auto;
+    display: inline;
+    background:#07294b;
+    color:#fff;
+    padding: 8px,14px;
+    border-radius:5px;
+    font-weight: 700;
+}
+.id-label{
+ margin-right: 6px;
+    opacity:0.9;
+    font-weight: 600;
+    margin-left: 10px;
+    align-items: center;
+}
+.barcode{
+    margin-right: 30px;
+    margin-left:25px;
+    width: 60%;
+     height: 32px;
+     padding-bottom: 10px;
+    background-image: repeating-linear-gradient(90deg,#0b2742 0 4px,#fff 4px 8px);
+
+}
+.card-footer{
+    background: #f9fafb;
+    padding-right: 10px;
+    padding-left: 18px; 
+    text-align: center;
+     padding-top: 10px;
+    border-top: 1px solid black;
+
+}
