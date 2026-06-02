@@ -1,45 +1,37 @@
-const time = document.getElementById("time");
-const dateEl = document.getElementById("date");
-const toggleBtn = document.getElementById("toggleBtn");
-let is24HourFormat = true;
+let time=document.getElementById("time");
+let date=document.getElementById("date");
+let toggle=document.getElementById("toggleBtn");
+let is24hourformat=true;
 
-function clock() {
-  const now = new Date();
-  let hours = now.getHours();
-  const minutes = String(now.getMinutes()).padStart(2, "0");
-  const seconds = String(now.getSeconds()).padStart(2, "0");
-  let period = "";
 
-  if (!is24HourFormat) {
-    period = hours >= 12 ? " PM" : " AM";
-    hours = hours % 12 || 12;
+function updateTime(){
+
+let now=new Date();
+let hours=String(now.getHours()).padStart(2,'0');
+let minutes=String(now.getMinutes()).padStart(2,'0');
+let seconds=String(now.getSeconds()).padStart(2,'0');
+let period="";
+
+if(!is24hourformat){
+  period=hours>=12?" PM":" AM";
+  hours=String(hours%12||12).padStart(2,'0');
+}
+
+let day=now.getDate();
+let month=now.getMonth()+1;
+let year=now.getFullYear();
+
+time.innerText=hours+":"+minutes+":"+seconds+period;
+date.innerText=day+"/"+month+"/"+year;
+}
+function toggleFormat(){
+  is24hourformat=!is24hourformat;
+  if(is24hourformat){
+    toggle.innerText="Switch to 12-hour format";
+  }else{
+    toggle.innerText="Switch to 24-hour format";
   }
-
-  const day = String(now.getDate()).padStart(2, "0");
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const year = now.getFullYear();
-
-  time.innerText = `${hours}:${minutes}:${seconds}${period}`;
-  dateEl.innerText = `${day}-${month}-${year}`;
+  updateTime();
 }
-
-function updateToggleButton() {
-  if (!toggleBtn) return;
-  toggleBtn.innerText = is24HourFormat
-    ? "Switch to 12-hour format"
-    : "Switch to 24-hour format";
-}
-
-function toggleHourFormat() {
-  is24HourFormat = !is24HourFormat;
-  updateToggleButton();
-  clock();
-}
-
-updateToggleButton();
-clock();
-setInterval(clock, 1000);
-
-if (toggleBtn) {
-  toggleBtn.addEventListener("click", toggleHourFormat);
-}
+updateTime();
+setInterval(updateTime,1000);
